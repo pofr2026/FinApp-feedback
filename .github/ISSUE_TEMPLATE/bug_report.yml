@@ -1,0 +1,56 @@
+name: Bug report
+description: Report something that did not work as expected.
+title: "Bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing FinApp. Please do not include bank passwords, full account numbers, card numbers, private keys, recovery phrases, or sensitive financial documents.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen?
+      options:
+        - Windows app
+        - Android app
+        - Import
+        - OCR / receipt scan
+        - Reports
+        - Categories
+        - Accounts / net worth
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Tell us what you were doing and what you noticed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: How important is this?
+      options:
+        - Blocking
+        - Annoying
+        - Nice to improve
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version or build, if known
+      placeholder: e.g. pre-1.0 build from 2026-07-02
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Screenshots are welcome if they do not contain sensitive financial data.
