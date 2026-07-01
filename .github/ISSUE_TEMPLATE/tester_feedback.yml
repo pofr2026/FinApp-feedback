@@ -1,0 +1,48 @@
+name: Tester feedback
+description: Share general feedback after using FinApp.
+title: "Feedback: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for general impressions, confusing moments, or notes that are not clearly a bug or feature request. Please avoid sensitive financial details.
+  - type: dropdown
+    id: feedback-type
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - Confusing experience
+        - General feedback
+        - Privacy or trust concern
+        - Documentation or onboarding
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: What should we know?
+      description: Tell us what felt good, unclear, missing, or risky.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen?
+      options:
+        - Windows app
+        - Android app
+        - Import
+        - OCR / receipt scan
+        - Reports
+        - Categories
+        - Accounts / net worth
+        - Website
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact, optional
+      description: Leave an email or GitHub handle if follow-up is okay.
