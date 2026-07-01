@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest a workflow or capability that would make FinApp more useful.
+title: "Feature: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape FinApp. Please describe the real finance workflow you want to improve.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the situation or workflow where FinApp feels incomplete.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like FinApp to do?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area does this affect most?
+      options:
+        - Windows app
+        - Android app
+        - Import
+        - OCR / receipt scan
+        - Reports
+        - Categories
+        - Accounts / net worth
+        - Budgets / goals
+        - Portfolio
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: How important is this?
+      options:
+        - Essential for my workflow
+        - Useful improvement
+        - Nice to have
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: How do you handle this today?
+      description: Spreadsheet, banking app, manual notes, another tool, or nothing yet.
